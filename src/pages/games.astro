@@ -12,28 +12,38 @@ const games = getGamesCollection();
     <div class="grid gap-6">
       {games.map((game) => (
         <Card className="p-6">
-          <div class="flex gap-4">
-            <img 
-              src={game.thumbnail} 
-              alt={game.title}
-              class="w-32 h-24 object-cover rounded"
-            />
-            <div>
-              <h2 class="text-2xl font-semibold mb-2">
-                <a 
-                  href={`https://www.boardgamegeek.com/boardgame/${game.objectId}`}
-                  class="hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {game.title}
-                </a>
-              </h2>
-              <div class="flex items-center gap-2 text-sm text-muted-foreground mb-3">
-                <span>{game.yearPublished}</span>
-                <span>•</span>
-                <span>{game.numPlays} plays</span>
+          <div class="flex gap-4 justify-between">
+            <div class="flex gap-4">
+              <img 
+                src={game.thumbnail} 
+                alt={game.title}
+                class="w-32 h-24 object-cover rounded"
+              />
+              <div>
+                <h2 class="text-2xl font-semibold mb-2">
+                  <a 
+                    href={`https://www.boardgamegeek.com/boardgame/${game.objectId}`}
+                    class="hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {game.title}
+                  </a>
+                </h2>
+                <div class="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                  <span>{game.yearPublished}</span>
+                  <span>•</span>
+                  <span>{game.numPlays} plays</span>
+                </div>
               </div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <button class="px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90">
+                Can I borrow this?
+              </button>
+              <button class="px-4 py-2 bg-secondary text-secondary-foreground rounded hover:bg-secondary/90">
+                Let's play this!
+              </button>
             </div>
           </div>
         </Card>
