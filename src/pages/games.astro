@@ -35,16 +35,23 @@ const games = getGamesCollection();
                   <span>•</span>
                   <span>{game.numPlays} plays</span>
                 </div>
+                <div class="flex gap-4">
+                  <a 
+                    href={`mailto:boardgames@eaglesham.temp?subject=Can I borrow ${encodeURIComponent(game.title)}?`}
+                    class="px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90"
+                  >
+                    Can I borrow this?
+                  </a>
+                  <a 
+                    href={`mailto:boardgames@eaglesham.temp?subject=Let's play ${encodeURIComponent(game.title)}!`}
+                    class="px-4 py-2 bg-secondary text-secondary-foreground rounded hover:bg-secondary/90"
+                  >
+                    Let's play this!
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="flex flex-col gap-2">
-              <button class="px-4 py-2 bg-primary text-primary-foreground rounded hover:bg-primary/90">
-                Can I borrow this?
-              </button>
-              <button class="px-4 py-2 bg-secondary text-secondary-foreground rounded hover:bg-secondary/90">
-                Let's play this!
-              </button>
-            </div>
+            
           </div>
         </Card>
       ))}
