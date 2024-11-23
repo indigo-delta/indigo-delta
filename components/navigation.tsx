@@ -12,13 +12,13 @@ export function Navigation() {
           </Link>
           <div className="flex gap-6">
             <Link
-              href="/"
+              href="/indigo-delta"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Home
             </Link>
             <Link
-              href="/games"
+              href="/indigo-delta/games"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Games
