@@ -7,6 +7,7 @@ export interface Game {
   thumbnail: string;
   yearPublished: number;
   numPlays: number;
+  objectId: string;
 }
 
 export function getGamesCollection(): Game[] {
@@ -24,6 +25,7 @@ export function getGamesCollection(): Game[] {
     image: item.image,
     thumbnail: item.thumbnail,
     yearPublished: parseInt(item.yearpublished),
-    numPlays: parseInt(item.numplays)
+    numPlays: parseInt(item.numplays),
+    objectId: item.objectid
   }));
 } 
