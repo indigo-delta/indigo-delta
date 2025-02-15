@@ -3,7 +3,7 @@ import { DayPicker } from 'react-day-picker';
 import { cn } from '../lib/utils';
 
 const gameNights = [
-  new Date(2025, 2, 23)
+  new Date(2025, 1, 23)
 ];
 
 export function Calendar() {
